@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+
 public class Code15 {
     public static void main(String[] args) {
         
@@ -13,13 +14,16 @@ public class Code15 {
            // 현재 위치의 인덱스 
            // ex. i=1, j=0 즉, 비교인덱스 = 현재 인덱스 -1
            int j = i-1; 
-           // 입력한 값이 배열의 최근 값 보다 작으면 data[j]를 한칸씩 뒤로보냄
+           // 입력한 값이 배열의 최근 값 보다 작으면 
            while(j>=0 && data[j]>tmp){
-               data[j+1]=data[j];
+               data[j+1]=data[j]; // data[j]를 한칸씩 뒤로보냄
                j--;
            }
            data[j+1]=tmp;
 
+           for(int k=0;k<=i;k++){
+               System.out.print(data[k]);
+           }
 
         }
         kb.close();

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    
+</head>
+<body>
+    <script lang="javascript">
+        // 스코프
+        var flag = true;
+        var character = 'Freddy';
+    
+        if(flag) {
+            var character = 'Bella';
+        }
+    
+        function change(character) {
+            var character=character;
+        }
+    
+        change('Popo');
+    
+        console.log(character);
+
+
+        // 클로저
+        function outter(){ 
+            var title="title";
+            return function(){ // outter는 retunr하고 생 마감했다.
+                alert(title);
+            }
+        } // function(){alert(title)} 자체를 반환함
+        var inner = outter(); // outter는 생을 마감했음에도 불고하고 
+        inner(); // 실행하게 되면 외부함수에 있던 변수에 접근 가능하다는게 클로저
+    </script>
+</body>
+</html>
