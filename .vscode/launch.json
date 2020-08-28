@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - TaskSet1",
+            "request": "launch",
+            "mainClass": "TaskSet1",
+            "projectName": "lesson1"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Code15",
+            "request": "launch",
+            "mainClass": "Code15",
+            "projectName": "lesson1"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Code14",
             "request": "launch",
             "mainClass": "Code14",

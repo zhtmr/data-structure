@@ -22,9 +22,9 @@ public class Code15 {
            data[j+1]=tmp;
 
            for(int k=0;k<=i;k++){
-               System.out.print(data[k]);
+               System.out.print(data[k]+" ");
            }
-
+           System.out.println();
         }
         kb.close();
 
