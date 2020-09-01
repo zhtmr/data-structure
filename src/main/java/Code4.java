@@ -15,6 +15,6 @@ public class Code4 {
       System.out.println(name + ", you’re " + age + "years old woman.");
     } else
       out.println("Hmm... interesting.");
-
+    keyboard.close();
   }
 }

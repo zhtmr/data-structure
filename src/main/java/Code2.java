@@ -9,5 +9,6 @@ public class Code2 {
 
     int input = kb.nextInt();
     System.out.println(input == num ? ":-)" : ":-(");
+    kb.close();
   }
 }
