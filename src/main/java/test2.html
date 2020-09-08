@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p>전역 변수를 사용한 Counting</p>
+    <button id="increase">+</button>
+    <p id="count">0</p>
+    
+    <hr>
+
+    <p>클로저 사용</p>
+    <button id="increase1">+</button>
+    <p id="count1">0</p>
+
+    <script>
+        var increaseBtn = document.getElementById('increase');
+        var count = document.getElementById('count');
+
+        // 카운트 상태를 유지하기 위한 전역 변수
+        var counter = 0;
+
+        function increase() {
+           return ++counter;
+        }
+
+        increaseBtn.onclick = function () {
+            count.innerHTML = increase();
+        };
+
+        // ====================================================
+
+
+        // 클로저
+        var increase1Btn = document.getElementById('increase1');
+        var count1 = document.getElementById('count1');
+
+        var increase1 = (function (){
+            var counter = 0;
+            return function(){
+                return ++counter;
+            }
+        })();
+
+        increase1Btn.onclick = function(){
+            count1.innerHTML = increase1();
+        };
+
+    </script>
+</body>
+
+</html>

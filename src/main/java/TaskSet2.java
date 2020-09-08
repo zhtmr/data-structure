@@ -16,7 +16,7 @@ public class TaskSet2 {
       if (isP) {
         count++;
         if (count <= 50) {
-//          System.out.println(i);
+        //  System.out.println(i);
           sum += i;
         }
       }
@@ -207,6 +207,7 @@ public class TaskSet2 {
       }
       System.out.println();
     }
+    kb.close();
     System.out.println("-----------------");
   }
 }
