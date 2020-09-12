@@ -17,7 +17,7 @@ public class Code10 {
 
       if (isP) {
         count++;
-        System.out.println("("+count+") "+n + " 은 소수다");
+        System.out.println("(" + count + ") " + n + " 은 소수다");
       }
     }
     System.out.println(count);

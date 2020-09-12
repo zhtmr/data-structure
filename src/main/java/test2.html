@@ -37,9 +37,9 @@
         var increase1 = (function (){
             var counter = 0;
             return function(){
-                return ++counter;
+                return ++counter; // return 하지않으면 undefined 뜬다. 지역변수이기 때문. 버튼을 눌렀을때 counter 값이 직접 필요하기 때문에 return해줘야한다.
             }
-        })();
+        })(); // var increase1 = function(){return ++counter}
 
         increase1Btn.onclick = function(){
             count1.innerHTML = increase1();
