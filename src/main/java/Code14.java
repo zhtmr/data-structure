@@ -20,6 +20,37 @@ public class Code14 {
         }
       }
     }
+    for (int i = 0; i < n; i++) {
+      System.out.print(data[i] + " ");
+    }
+
+    for (int i = 0; i < n; i++) {
+      for (int j = 1; j < n - i; j++) {
+        if (data[j] < data[j - 1]) {
+          int tmp = data[j - 1];
+          data[j - 1] = data[j];
+          data[j] = tmp;
+        }
+      }
+    }
+    System.out.println();
+    for (int i = 0; i < n; i++) {
+      System.out.print(data[i] + " ");
+    }
+
+    for (int i = 0; i < n; i++) {
+      for (int j = 0; j < n-i-1; j++) {
+        if (data[j]>data[j+1]){
+          int tmp = data[j];
+          data[j+1]=data[j];
+          data[j]=tmp;
+        }
+      }
+    }
+    System.out.println();
+    for (int i = 0; i < n; i++) {
+      System.out.print(data[i]+" ");
+    }
 
     for (int i = 0; i < n; i++) {
       for (int j = i + 1; j < n; j++) {
@@ -30,11 +61,9 @@ public class Code14 {
         }
       }
     }
-    for (int i = 0; i < n; i++)
-      System.out.print(data[i] + " ");
-
+    System.out.println();
     for (int i = 0; i < n; i++) {
-      System.out.print(data[i]+" ");
+      System.out.print(data[i] + " ");
     }
   }
 }
