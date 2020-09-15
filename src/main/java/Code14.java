@@ -21,18 +21,20 @@ public class Code14 {
       }
     }
 
-    // for(int i=0;i<n-1;i++){
-    //     for(int j=1;j<n-i;j++){
-    //         if(data[j-1]>data[j]){
-    //             int tmp=data[j];
-    //             data[j]=data[j-1];
-    //             data[j-1]=tmp;
-    //         }
-    //     }
-    // }
+    for (int i = 0; i < n; i++) {
+      for (int j = i + 1; j < n; j++) {
+        if (data[i] > data[j]) {
+          int tmp = data[j];
+          data[j] = data[i];
+          data[i] = tmp;
+        }
+      }
+    }
+    for (int i = 0; i < n; i++)
+      System.out.print(data[i] + " ");
 
     for (int i = 0; i < n; i++) {
-      System.out.println(data[i]);
+      System.out.print(data[i]+" ");
     }
   }
 }
