@@ -12,6 +12,32 @@ public class TaskSet8 {
     }
     kb.close();
 
+//    for (int i = n - 1; i > 0; i--) {
+//      for (int j = 0; j < i; j++) {
+//        if (data[j] > data[j + 1]) {
+//          int tmp = data[j + 1];
+//          data[j + 1] = data[j];
+//          data[j] = tmp;
+//        }
+//      }
+//    }
+//
+//    for (int i = 0; i < n - 1; i++) {
+//      if (data[i] == data[i + 1]) {
+//        for (int k = 0; k < n - 1; k++) {
+//          data[k] = data[k + 1];
+//        }
+//      }
+//    }
+
+    for (int i = 0; i < n; i++) {
+      for (int j = 0; j < n; j++) {
+        if (i != j && data[i] == data[j]) {
+          data[j] = 0;
+        }
+      }
+    }
+
     for (int i = n - 1; i > 0; i--) {
       for (int j = 0; j < i; j++) {
         if (data[j] > data[j + 1]) {
@@ -21,21 +47,10 @@ public class TaskSet8 {
         }
       }
     }
-
-    for (int i = 0; i < n - 1; i++) {
-      if (data[i] == data[i + 1]) {
-        for (int k = 0; k < n - 1; k++) {
-          data[k] = data[k + 1];
-        }
-      }
-    }
-
-
-
-
-
     for (int i = 0; i < n; i++) {
-      System.out.print(data[i] + " ");
+      if (data[i] > 0) {
+        System.out.print(data[i] + " ");
+      }
     }
   }
 }
