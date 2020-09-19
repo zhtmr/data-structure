@@ -1,3 +1,5 @@
+package goh;
+
 public class TaskSet1 {
 
   public static void main(String[] args) {

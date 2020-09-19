@@ -1,3 +1,5 @@
+package goh;
+
 import java.util.Scanner;
 
 public class TaskSet3 {

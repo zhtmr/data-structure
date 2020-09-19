@@ -1,3 +1,5 @@
+package goh;
+
 import java.util.Scanner;
 
 public class Code12 {
@@ -22,8 +24,8 @@ public class Code12 {
       }
     }
     System.out.println(max);
-        
-      
-    
+
+
+
   }
 }

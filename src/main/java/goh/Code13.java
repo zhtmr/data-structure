@@ -1,3 +1,5 @@
+package goh;
+
 import java.util.Scanner;
 
 public class Code13 {
@@ -25,14 +27,14 @@ public class Code13 {
         // test if it is a prime
         boolean isp = true;
         for(int k=2; k*k<=val && isp; k++){
-          if(val % k == 0)
+          if (val % k == 0)
             isp = false;
         }
         // if yes, compare to the max
         if(isp && val>1 && val>max){
           max=val;
         }
-        
+
       }
     }
     if (max > 0)
