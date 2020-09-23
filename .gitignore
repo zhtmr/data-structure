@@ -25,7 +25,7 @@
 hs_err_pid*
 
 .gradle/5.2.1/vcsMetadata-1/
-bin/test/
+bin/
 build/generated/
 build/tmp/
 src/main/resources/
