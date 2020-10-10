@@ -15,6 +15,7 @@ public class hashSet {
     return String.valueOf(num);
   }
 
+
   // 값이 같은가?
   @Override
   public boolean equals(Object o) {

@@ -81,8 +81,10 @@ class WildSuper {
   // <? super T> 메소드
   public static void printData(List <? super Woman> list) {
     // Woman과 부모인 Person의 데이터만 허용
-    for(Object obj:list) // 어떤 자료형이든 받아야하기에 Object형
+    for (Object obj : list) // 어떤 자료형이든 받아야하기에 Object형
+    {
       System.out.println(obj);
+    }
   }
 
 
