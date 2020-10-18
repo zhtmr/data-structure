@@ -1,27 +1,29 @@
-package goh;
+package goh.lesson1;
 
 import java.util.Scanner;
 
-public class TaskSet5 {
+public class Code11 {
 
   public static void main(String[] args) {
     Scanner kb = new Scanner(System.in);
     int n = kb.nextInt();
     int[] data = new int[n];
-
     for (int i = 0; i < n; i++) {
       data[i] = kb.nextInt();
     }
     kb.close();
 
-    int max =data[0] , min = data[0];
+    int count = 0;
     for (int i = 0; i < n; i++) {
-      if (data[i] > max) {
-        max = data[i];
+      for (int j = i + 1; j < n; j++) {
+        if (data[i] == data[j]) {
+          count++;
+        }
       }
-      if (data[i] < min)
-        min = data[i];
     }
-    System.out.println(max-min);
+    System.out.println(count);
+
+
   }
+
 }

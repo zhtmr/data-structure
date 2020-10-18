@@ -1,4 +1,4 @@
-package goh;
+package goh.lesson1;
 
 public class TaskSet1 {
 

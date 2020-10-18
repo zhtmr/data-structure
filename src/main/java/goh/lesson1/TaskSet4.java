@@ -1,18 +1,19 @@
-package goh;
+package goh.lesson1;
 
 import java.util.Scanner;
 
-public class TaskSet10 {
+public class TaskSet4 {
 
   public static void main(String[] args) {
     Scanner kb = new Scanner(System.in);
     int n = kb.nextInt();
-    int[] data = new int[n];
+
     for (int i = 0; i < n; i++) {
-      data[i] = kb.nextInt();
+      for (int j = 0; j <= i; j++) {
+        System.out.print(j + 1 + " ");
+      }
+      System.out.println();
     }
 
-    int k = kb.nextInt();
-    kb.close();
   }
 }

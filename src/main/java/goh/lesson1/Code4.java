@@ -1,4 +1,4 @@
-package goh;
+package goh.lesson1;
 
 import static java.lang.System.out;
 
