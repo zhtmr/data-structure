@@ -9,6 +9,7 @@ public class Code21 {
   static int n;
   static int[][] grid;
 
+
   public static void main(String[] args) {
     try {
       Scanner inFile = new Scanner(new File("data.txt"));
@@ -68,39 +69,53 @@ public class Code21 {
 
   // 방향으로 k만큼 갔을때 숫자
   private static int getDigit(int x, int y, int dir, int k) {
-    int newX = x, newY = y;
-    switch (dir) {
-      case 0:
-        newY -= k;
-        break;
-      case 1:
-        newX += k;
-        newY -= k;
-        break;
-      case 2:
-        newX += k;
-        break;
-      case 3:
-        newX += k;
-        newY += k;
-        break;
-      case 4:
-        newY += k;
-        break;
-      case 5:
-        newX -= k;
-        newY += k;
-        break;
-      case 6:
-        newX -= k;
-        break;
-      case 7:
-        newX -= k;
-        newY -= k;
-        break;
-    }
+    /*
+     *   7   0   1
+     *   6 (x,y) 2
+     *   5   4   3
+     * */
+//    1. dir : 0 ~7 (x,y) 좌표 증감
+    int[] offsetX = {0, 1, 1, 1, 0, -1, -1, -1};
+    int[] offsetY = {-1, -1, 0, 1, 1, 1, 0, -1};
+
+//    k칸 떨어진 위치의 좌표 : (x+k*offsetX[dir], y+k*offsetY[dir])
+    int newX = x+k*offsetX[dir];
+    int newY = y+k*offsetY[dir];
+
+//    2. 방향(0~7) 에 따른 (x,y) 좌표 증감
+//    int newX = x, newY = y;
+//    switch (dir) {
+//      case 0:
+//        newY -= k;
+//        break;
+//      case 1:
+//        newX += k;
+//        newY -= k;
+//        break;
+//      case 2:
+//        newX += k;
+//        break;
+//      case 3:
+//        newX += k;
+//        newY += k;
+//        break;
+//      case 4:
+//        newY += k;
+//        break;
+//      case 5:
+//        newX -= k;
+//        newY += k;
+//        break;
+//      case 6:
+//        newX -= k;
+//        break;
+//      case 7:
+//        newX -= k;
+//        newY -= k;
+//        break;
+//    }
     // 0보다 작거나 n보다 클경우
-    if (newX < 0 || newX >= n || newY < 0 || newY >= n) {
+    if (newX < 0 || newX >= grid.length || newY < 0 || newY >= grid.length) {
       return -1;
     }
     return grid[newX][newY];
